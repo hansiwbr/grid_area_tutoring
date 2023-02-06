@@ -22,53 +22,53 @@
 
     grid-template-areas:
         /* mit einem punkt, setzen wir eine leere grid-fraktion */
-        "boxOne boxOne boxTwo boxTwo  boxFive"
-        "boxOne boxOne boxTwo  boxTwo boxFive"
-        "boxThree boxThree boxThree   .       boxFive"
-        "boxSix boxSix boxSix   .       boxFive"
-        "boxSix boxSix boxSix   boxFour       boxFive";
+        "boxOne     boxOne      boxTwo      boxTwo      boxFive"
+        "boxOne     boxOne      boxTwo      boxTwo      boxFive"
+        "boxThree   boxThree    boxThree    .           boxFive"
+        "boxSix     boxSix      boxSix      .           boxFive"
+        "boxSix     boxSix      boxSix      boxFour     boxFive";
 }
 
 .box
 {
-    background: tomato;
+    background: rgb(255, 38, 0);
     border: 5px solid black;
     padding: 10px;
 }
 
 .box-1
 {
-    background: cyan;
+    background: rgb(0, 4, 255);
     /* mit grid-area: ; können wir dem element einen namen geben, wie eine variable */
     grid-area: boxOne;
 }
 
 .box-2
 {
-    background: yellow;
+    background: rgb(89, 255, 24);
     grid-area: boxTwo;
 }
 
 .box-3
 {
-    background: purple;
+    background: rgb(255, 2, 255);
     grid-area: boxThree;
 }
 
 .box-4
 {
-    background: orange;
+    background: rgb(255, 174, 24);
     grid-area: boxFour;
 }
 
 .box-5
 {
-    background: olive;
+    background: rgb(255, 255, 0);
     grid-area: boxFive;
 }
 
 .box-6
 {
-    background: saddlebrown;
+    background: rgb(49, 21, 0);
     grid-area: boxSix;
 }
