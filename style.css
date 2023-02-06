@@ -9,10 +9,10 @@
     display: grid;
     gap: 10px;
     padding: 10px;
-
+    /* hier legst du fest wie groß die Spalten sind und wie viele Spalten das grid haben soll */
     grid-template-columns:
         1fr     2fr     1fr     0.5fr     2fr;
-
+    /* hier legst fest wie groß die Zeilen sind und wie viele Zeilen das grid haben soll */
     grid-template-rows:
         1fr
         2fr
@@ -21,12 +21,20 @@
         3fr;
 
     grid-template-areas:
-        /* mit einem punkt, setzen wir eine leere grid-fraktion */
+        /* wie hier zu sehen, ist das grid-template-area wie eine tabelle zu sehen
+           so ist der aufbau und die funktion einfacher und übersichtlicher
+           die . punkte sind freiräume, die leer bleiben aber den angegebenen freiraum einnehmen */
         "boxOne     boxOne      boxTwo      boxTwo      boxFive"
         "boxOne     boxOne      boxTwo      boxTwo      boxFive"
         "boxThree   boxThree    boxThree    .           boxFive"
         "boxSix     boxSix      boxSix      .           boxFive"
         "boxSix     boxSix      boxSix      boxFour     boxFive";
+
+        /* die reihenfolge ist wichtig, die elemente können nicht wahrlos in der area platziert werden,
+           da es sonst das grid zerschießt und somit nicht funktioniert 
+           
+           WICHTIG: jede neue zeile ist eine neue ROW das heißt alles was zuerst in " " steht ist die erste ROW sobald
+                    man das zweitemal " " verwendet, öfnet man eine zweite ROW*/
 }
 
 .box
@@ -39,7 +47,7 @@
 .box-1
 {
     background: rgb(0, 4, 255);
-    /* mit grid-area: ; können wir dem element einen namen geben, wie eine variable */
+    /* mit grid-area: ; legen wir den namen in der grid area fest, den wir dann oben verwenden zum platzieren */
     grid-area: boxOne;
 }
 
